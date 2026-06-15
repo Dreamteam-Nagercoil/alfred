@@ -156,6 +156,7 @@ cd alfred
 
 ```bash
 python3 -m venv venv
+# and activate it
 source venv/bin/activate
 ```
 
@@ -172,4 +173,8 @@ If required:
 ```bash
 pip install python-multipart
 ```
+
+# Step 4: Configure Environment Variables
+
+Edit .env and fill in GEMINI_API_KEY and TENANTS_BASE
 
