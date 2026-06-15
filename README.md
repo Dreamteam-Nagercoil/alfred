@@ -4,8 +4,8 @@
 
 1. Clone the repo
 ```bash
-   git clone https://github.com/yourname/opencode-platform.git
-   cd opencode-platform
+   git clone https://github.com/Dreamteam-Nagercoil/alfred.git
+   cd alfred/
 ```
 
 2. Install dependencies
