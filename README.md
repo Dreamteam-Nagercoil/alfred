@@ -79,3 +79,15 @@ Integrated with Vikunja to provide:
 - Progress Tracking
 - Workflow Monitoring
 
+---
+
+### Container Isolation
+
+Each workspace is provisioned inside isolated Docker containers, ensuring:
+
+- Separation of environments
+- Better security
+- Easy maintenance
+- Improved portability
+
+---
