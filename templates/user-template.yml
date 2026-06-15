@@ -1,0 +1,31 @@
+services:
+  sandbox:
+    image: opencode-sandbox:latest
+    container_name: "${USER_ID}-env"
+
+    environment:
+      USER_ID: ${USER_ID}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GOOGLE_GENERATIVE_AI_API_KEY: ${GEMINI_API_KEY}
+
+      VIKUNJA_USER_TOKEN: ${VIKUNJA_USER_TOKEN}
+      VIKUNJA_PROJECT_ID: ${VIKUNJA_PROJECT_ID}
+
+      VIKUNJA_URL: http://127.0.0.1:3456
+      VIKUNJA_TOKEN: ${VIKUNJA_USER_TOKEN}
+      
+      VIKUNJA_OUTGOINGREQUESTS_ALLOWNONROUTABLEIPS: "true"
+
+      OPENCODE_SERVER_USERNAME: ${USER_ID}
+      OPENCODE_SERVER_PASSWORD: ${SERVER_PASS}
+
+    ports:
+      - "${OPENCODE_PORT}:4096"   # VS Code Web Server
+      - "${AGENT_UI_PORT}:8080"   # New: OpenCode Standalone Task UI
+      - "${VIKUNJA_PORT}:3456"    # Vikunja Project Dashboard
+      - "${WEBHOOK_PORT}:5000"    # Webhook Receiver
+
+    volumes:
+      - ${HOST_DATA_PATH}:/home/vscode/workspace
+
+    restart: unless-stopped
