@@ -143,7 +143,7 @@ Each workspace is provisioned inside isolated Docker containers, ensuring:
 
 ---
 
-# Step 1: Clone Repository
+### Step 1: Clone Repository
 
 ```bash
 git clone https://github.com/Dreamteam-Nagercoil/alfred.git
@@ -152,7 +152,7 @@ cd alfred
 
 ---
 
-# Step 2: Create Virtual Environment
+### Step 2: Create Virtual Environment
 
 ```bash
 python3 -m venv venv
@@ -162,7 +162,7 @@ source venv/bin/activate
 
 ---
 
-# Step 3: Install Dependencies
+### Step 3: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -174,7 +174,28 @@ If required:
 pip install python-multipart
 ```
 
-# Step 4: Configure Environment Variables
+### Step 4: Configure Environment Variables
 
 Edit .env and fill in GEMINI_API_KEY and TENANTS_BASE
 
+### Step 5: Launch Alfred
+
+Start FastAPI:
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+Expected Output:
+
+```text
+INFO: Uvicorn running on http://127.0.0.1:8000
+```
+
+Open:
+
+```text
+http://localhost:8000
+```
+
+---
