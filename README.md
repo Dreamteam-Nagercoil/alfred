@@ -31,12 +31,13 @@
 
 
 # Alfred
-## Prerequisites
 
-Operating System:
+## Overview
 
-Windows 10/11, WSL2 installed, Ubuntu 22.04 or newer.
+Alfred is an AI-powered productivity and workflow automation platform designed to simplify complex organizational workflows. It combines task management, AI agents, automation pipelines, and isolated developer workspaces into a single unified system.
 
-Software Requirements:
+The goal of Alfred is to reduce operational overhead by automating repetitive tasks while keeping humans in control of critical decisions.
 
-Docker in WSL, Python 3.10+, Git.
+---
+
+
