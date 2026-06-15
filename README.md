@@ -28,3 +28,15 @@
 ```bash
    uvicorn backend.main:app --reload
 ```
+
+
+# Alfred
+## Prerequisites
+
+Operating System:
+
+Windows 10/11, WSL2 installed, Ubuntu 22.04 or newer.
+
+Software Requirements:
+
+Docker in WSL, Python 3.10+, Git.
