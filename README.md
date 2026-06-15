@@ -91,3 +91,85 @@ Each workspace is provisioned inside isolated Docker containers, ensuring:
 - Improved portability
 
 ---
+
+## Technology Stack
+
+### Backend
+
+- Python
+- FastAPI
+- HTTPX
+
+### Containerization
+
+- Docker
+- Docker Compose
+
+### Productivity Tools
+
+- Vikunja
+
+### Development Environment
+
+- VS Code Server
+
+### AI Layer
+
+- Gemini API
+- MCP Integrations
+
+### Hosting Environment
+
+- WSL2 Ubuntu
+- Docker Runtime
+
+---
+
+## Installation Guide
+
+### Prerequisites
+
+#### In Windows
+
+- Windows 10/11
+- WSL2 Enabled
+
+#### Software Requirements
+
+- Docker Desktop
+- Ubuntu (WSL)
+- Python 3.10+
+- Git
+
+---
+
+# Step 1: Clone Repository
+
+```bash
+git clone https://github.com/Dreamteam-Nagercoil/alfred.git
+cd alfred
+```
+
+---
+
+# Step 2: Create Virtual Environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+# Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If required:
+
+```bash
+pip install python-multipart
+```
+
