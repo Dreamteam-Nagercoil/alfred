@@ -1,4 +1,4 @@
-# OpenCode Platform
+# Alfred
 
 ## Setup
 
