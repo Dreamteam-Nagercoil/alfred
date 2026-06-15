@@ -42,3 +42,40 @@ The goal of Alfred is to reduce operational overhead by automating repetitive ta
 
 ## Problem Statement
 Build innovative software solutions that redefine how people work, collaborate, create, and manage their daily workflows. The project should focus on improving productivity for individuals, teams, startups, creators, developers, designers, or businesses using modern technologies such as Artificial Intelligence, automation, cloud systems, or smart integrations.
+
+
+## Features
+
+### Developer Sandbox Provisioning
+
+Provision complete development environments with a single click.
+
+Each environment includes:
+
+- VS Code Online
+- Vikunja Task Manager
+- OpenCode Agent
+- Persistent Storage
+
+---
+
+### AI Assisted Workflow Automation
+
+Alfred leverages AI-powered workflows to:
+
+- Process user requests
+- Manage repetitive tasks
+- Assist in task execution
+- Generate outputs efficiently
+
+---
+
+### Task Management
+
+Integrated with Vikunja to provide:
+
+- Project Management
+- Task Assignment
+- Progress Tracking
+- Workflow Monitoring
+
