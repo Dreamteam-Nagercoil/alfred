@@ -199,3 +199,31 @@ http://localhost:8000
 ```
 
 ---
+
+# Usage
+
+## Provisioning a Developer Environment
+
+Using Alfred begins with the creation of a dedicated developer sandbox. An administrator accesses the Alfred dashboard, enters the developer's information, and provisions a new environment. Once submitted, Alfred automatically generates the required credentials, creates isolated storage, deploys the necessary Docker containers, and configures all supporting services.
+
+Within a few moments, the developer receives access to a complete workspace containing a browser-based VS Code environment, a Vikunja project management workspace, and an AI agent.
+
+---
+
+## AI-Powered Task Execution Workflow
+
+Alfred goes beyond simply providing a development environment. It establishes a direct connection between project management and software development.
+
+Developers can create and manage tasks through Vikunja, just as they would in a traditional project management system. However, when a new task is added, Alfred's AI workflow analyzes the task description and determines the required implementation.
+
+The agent then generates relevant code, boilerplate structures, configuration files, or implementation suggestions based on the task requirements. These generated artifacts are automatically made available inside the developer's VS Code workspace, allowing the developer to immediately review, modify, and continue development.
+
+For example, if a task such as:
+
+> Create a FastAPI endpoint for user authentication
+
+is added to Vikunja, the AI agent can generate the initial API structure, route definitions, request models, and supporting files directly within the development environment. The developer can then refine the generated code instead of starting from scratch.
+
+Once code has been generated or modified, developers can continue working inside the browser-based VS Code environment. Progress can be tracked through Vikunja, while the OpenCode agent remains available to assist with implementation, debugging, documentation, and automation tasks.
+
+By keeping task management, AI assistance, and software development within a single platform, Alfred reduces context switching and helps teams move from idea to implementation significantly faster.
