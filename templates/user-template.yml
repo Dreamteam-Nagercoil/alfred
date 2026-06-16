@@ -1,6 +1,6 @@
 services:
   sandbox:
-    image: opencode-sandbox:latest
+    image: alfred:latest
     container_name: "${USER_ID}-env"
 
     environment:
