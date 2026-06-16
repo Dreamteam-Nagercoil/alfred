@@ -84,12 +84,16 @@ Each workspace is provisioned inside isolated Docker containers, ensuring:
 
 ### AI Layer
 
-- Gemini API
+- OpenCode MCP client
+- Any model supported by Opencode
 - MCP Integrations
+ > Gemini API is used for prototyping purpose
+
 
 ### Hosting Environment
 
-- WSL2 Ubuntu
+- WSL2 Ubuntu (if running Windows)
+- Ubuntu (preferred)
 - Docker Runtime
 
 ---
@@ -105,18 +109,22 @@ Each workspace is provisioned inside isolated Docker containers, ensuring:
 
 #### Software Requirements
 
-- Docker Desktop
+- Docker Desktop, with WSL2 integration
 - Ubuntu (WSL)
 - Python 3.10+
 - Git
 
+#### In Linux
+- Docker
+- Docker compose
+- Python (3.10+)
 ---
 
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/Dreamteam-Nagercoil/alfred.git
-cd alfred
+$ git clone https://github.com/Dreamteam-Nagercoil/alfred.git
+$ cd alfred
 ```
 
 ---
@@ -124,9 +132,9 @@ cd alfred
 ### Step 2: Create Virtual Environment
 
 ```bash
-python3 -m venv venv
+$ python3 -m venv venv
 # and activate it
-source venv/bin/activate
+$ source venv/bin/activate
 ```
 
 ---
@@ -134,25 +142,33 @@ source venv/bin/activate
 ### Step 3: Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
-
-If required:
-
-```bash
-pip install python-multipart
-```
-
+---
 ### Step 4: Configure Environment Variables
 
-Edit .env and fill in GEMINI_API_KEY and TENANTS_BASE
+Rename `.env.example` into `.env`
+```
+cp .env.example .env
+```
+and add the Gemini API and Tenant's path
+
+---
+### Step 4: Build the Docker image
+> Make sure docker-ce, and docker compose along with their dependecies are installed. If using Windows, make sure you are using Docker on WSL and not Docker on Windows.
+
+```
+$ docker build -t alfred:latest .
+```
+
 
 ### Step 5: Launch Alfred
 
 Start FastAPI:
 
 ```bash
-uvicorn backend.main:app --reload
+$ cd backend/
+$ uvicorn backend.main:app --reload
 ```
 
 Expected Output:
@@ -173,9 +189,11 @@ http://localhost:8000
 
 ## Provisioning a Developer Environment
 
-Using Alfred begins with the creation of a dedicated developer sandbox. An administrator accesses the Alfred dashboard, enters the developer's information, and provisions a new environment. Once submitted, Alfred automatically generates the required credentials, creates isolated storage, deploys the necessary Docker containers, and configures all supporting services.
+Using Alfred begins with the creation of a dedicated developer sandbox. An administrator accesses the FastAPI interface, enters the developer's information, the port for each service (Vikunja, VSCode Web, and Opencode) and provisions a new environment. Once submitted, Alfred automatically generates the required credentials, creates isolated storage, deploys the necessary Docker containers, and configures all supporting services.
 
 Within a few moments, the developer receives access to a complete workspace containing a browser-based VS Code environment, a Vikunja project management workspace, and an AI agent.
+
+A separate project inside Vijunja is created called "Opencode projects" in which the user can create any tasks that will be automated using Opencode. 
 
 ---
 
@@ -209,6 +227,8 @@ The AI workflow can also be expanded significantly. Future versions of Alfred co
 To improve deployment flexibility, Alfred can be integrated with cloud platforms and container orchestration solutions, enabling organizations to deploy and manage environments at scale while maintaining isolation and security.
 
 Another area of expansion involves deeper integration with organizational resources. By connecting to internal documentation, knowledge bases, communication platforms, and repositories, Alfred could build a richer organizational knowledge graph and provide more accurate, context-aware assistance.
+
+We would also like to create a dashboard from which an administrator can view the AI API usage, resource utilization of individual docker containers and calculate the cost of running them. 
 
 Finally, support for self-hosted language models and custom AI agents would allow organizations to retain complete control over their data while tailoring Alfred's capabilities to their own workflows, tools, and business requirements.
 
