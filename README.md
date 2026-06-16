@@ -1,12 +1,12 @@
 # Alfred
 
-## Overview
 
 Alfred is an AI-powered productivity and workflow automation platform designed to simplify complex organizational workflows. It combines task management, AI agents, automation pipelines, and isolated developer workspaces into a single unified system.
 
 The goal of Alfred is to reduce operational overhead by automating repetitive tasks while keeping humans in control of critical decisions.
 
----
+> Try it out in our Azure deployment: https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/
+> The root path directs to the VSCode web. For Vikunja and Opencode, navigate to [/vikunja](https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/vikunja) and [/opencode](https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/opencode) respectively.
 
 ## Problem Statement
 Build innovative software solutions that redefine how people work, collaborate, create, and manage their daily workflows. The project should focus on improving productivity for individuals, teams, startups, creators, developers, designers, or businesses using modern technologies such as Artificial Intelligence, automation, cloud systems, or smart integrations.
