@@ -123,8 +123,8 @@ Each workspace is provisioned inside isolated Docker containers, ensuring:
 ### Step 1: Clone Repository
 
 ```bash
-$ git clone https://github.com/Dreamteam-Nagercoil/alfred.git
-$ cd alfred
+git clone https://github.com/Dreamteam-Nagercoil/alfred.git
+cd alfred
 ```
 
 ---
@@ -132,9 +132,9 @@ $ cd alfred
 ### Step 2: Create Virtual Environment
 
 ```bash
-$ python3 -m venv venv
+python3 -m venv venv
 # and activate it
-$ source venv/bin/activate
+source venv/bin/activate
 ```
 
 ---
@@ -142,7 +142,7 @@ $ source venv/bin/activate
 ### Step 3: Install Dependencies
 
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ---
 ### Step 4: Configure Environment Variables
@@ -158,7 +158,7 @@ and add the Gemini API and Tenant's path
 > Make sure docker-ce, and docker compose along with their dependecies are installed. If using Windows, make sure you are using Docker on WSL and not Docker on Windows.
 
 ```
-$ docker build -t alfred:latest .
+docker build -t alfred:latest .
 ```
 
 
@@ -167,8 +167,8 @@ $ docker build -t alfred:latest .
 Start FastAPI:
 
 ```bash
-$ cd backend/
-$ uvicorn backend.main:app --reload
+cd backend/
+uvicorn backend.main:app --reload
 ```
 
 Expected Output:
