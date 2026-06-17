@@ -7,9 +7,11 @@ The goal of Alfred is to reduce operational overhead by automating repetitive ta
 
 > Try it out in our Azure deployment: https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/
 > The root path directs to the VSCode web. For Vikunja and Opencode, navigate to [/vikunja](https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/vikunja) and [/opencode](https://opencode-workspace.wonderfulbay-2460ec53.centralindia.azurecontainerapps.io/opencode) respectively.
-
-> OpenCode Access Credentials: **Username:** arthur **Password:** oxfordsnotbrogues.
-
+>
+> OpenCode Access Credentials:
+> **Username:** arthur
+> **Password:** oxfordsnotbrogues.
+>
 > **Note:** For the demo deployment, we are using a free API from Google AI studio (though you can replace it with Ollama, or anything in the actual software, if you are running it locally on your own machine). We kindly ask you to refrain from overusing it since we are just a bunch of college students with hundreds of rupees of pocket money per month 🥲🥲
 
 ## Problem Statement
